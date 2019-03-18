@@ -1,0 +1,1009 @@
+******************************************************************************
+                  TI ARM Linker Unix v18.1.2                   
+******************************************************************************
+>> Linked Mon Mar 18 15:29:51 2019
+
+OUTPUT FILE NAME:   <Uhr.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00004211
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00040000  00004bdc  0003b424  R  X
+  SRAM                  20000000   00008000  0000080a  000077f6  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00004be0   00004be0    r-x
+  00000000    00000000    0000026c   0000026c    r-- .intvecs
+  0000026c    0000026c    00004376   00004376    r-x .text
+  000045e4    000045e4    000003ce   000003ce    r-- .const
+  000049b4    000049b4    00000004   00000004    r-- .init_array
+  000049b8    000049b8    00000228   00000228    r-- .cinit
+20000000    20000000    0000080a   00000000    rw-
+  20000000    20000000    0000026c   00000000    rw- .vtable
+  2000026c    2000026c    0000020c   00000000    rw- .data
+  20000478    20000478    00000200   00000000    rw- .stack
+  20000678    20000678    00000192   00000000    rw- .bss
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    0000026c     
+                  00000000    0000026c     tm4c123gh6pm_startup_ccs.obj (.intvecs)
+
+.text      0    0000026c    00004376     
+                  0000026c    00002f28     tm4c123gh6pm_startup_ccs.obj (.text)
+                  00003194    000001b6     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_add_t2.asm.obj (.text)
+                  0000334a    00000002     --HOLE-- [fill = 0]
+                  0000334c    00000140                                   : e_log2f.c.obj (.text:log2f)
+                  0000348c    00000136                                   : fd_div_t2.asm.obj (.text)
+                  000035c2    00000132     driverlib.lib : gpio.obj (.text:GPIOPadConfigSet)
+                  000036f4    000000fc     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_mul_t2.asm.obj (.text)
+                  000037f0    000000f8                                   : s_ceil.c.obj (.text:ceil)
+                  000038e8    000000f8                                   : s_floor.c.obj (.text:floor)
+                  000039e0    000000f4     driverlib.lib : sysctl.obj (.text:SysCtlClockSet)
+                  00003ad4    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : memcpy_t2.asm.obj (.text)
+                  00003b70    00000086                                   : fd_cmp_t2.asm.obj (.text:__aeabi_cdrcmple)
+                  00003bf6    0000007a                                   : memset_t2.asm.obj (.text)
+                  00003c70    00000078                                   : s_ceilf.c.obj (.text:ceilf)
+                  00003ce8    0000006e                                   : fd_tos_t2.asm.obj (.text)
+                  00003d56    00000002     --HOLE-- [fill = 0]
+                  00003d58    00000068     driverlib.lib : interrupt.obj (.text:IntDisable)
+                  00003dc0    00000068                   : interrupt.obj (.text:IntEnable)
+                  00003e28    00000068     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
+                  00003e90    00000060     driverlib.lib : timer.obj (.text:TimerConfigure)
+                  00003ef0    00000060     rtsv7M4_T_le_v4SPD16_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit:__TI_auto_init_nobinit)
+                  00003f50    00000056     driverlib.lib : gpio.obj (.text:GPIOIntTypeSet)
+                  00003fa6    00000002     --HOLE-- [fill = 0]
+                  00003fa8    0000004c                   : i2c.obj (.text:I2CMasterInitExpClk)
+                  00003ff4    0000004c                   : timer.obj (.text:_TimerIntNumberGet)
+                  00004040    00000048                   : gpio.obj (.text:GPIOPinConfigure)
+                  00004088    00000048     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_toi_t2.asm.obj (.text)
+                  000040d0    00000046     driverlib.lib : uart.obj (.text:UARTConfigSetExpClk)
+                  00004116    00000002     --HOLE-- [fill = 0]
+                  00004118    00000044                   : gpio.obj (.text:_GPIOIntNumberGet)
+                  0000415c    00000040                   : uart.obj (.text:_UARTIntNumberGet)
+                  0000419c    0000003c                   : ssi.obj (.text:SSIConfigSetExpClk)
+                  000041d8    00000038                   : sysctl.obj (.text:SysCtlPeripheralReady)
+                  00004210    00000038     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.text:_c_int00_noargs:_c_int00_noargs)
+                  00004248    00000034     driverlib.lib : interrupt.obj (.text:IntRegister)
+                  0000427c    00000034                   : sysctl.obj (.text:SysCtlPeripheralEnable)
+                  000042b0    0000002e     rtsv7M4_T_le_v4SPD16_eabi.lib : i_tofd_t2.asm.obj (.text)
+                  000042de    0000002a     driverlib.lib : gpio.obj (.text:GPIODirModeSet)
+                  00004308    00000020                   : uart.obj (.text:UARTDisable)
+                  00004328    0000001c     tm4c123gh6pm_startup_ccs.obj (.text:_Z5floorIiENSt3__29enable_ifIXsr3std3__211is_integralIT_EE5valueEdE4typeES2_)
+                  00004344    00000018     driverlib.lib : gpio.obj (.text:GPIOIntRegister)
+                  0000435c    00000018                   : gpio.obj (.text:GPIOPinTypeGPIOOutput)
+                  00004374    00000018                   : timer.obj (.text:TimerDisable)
+                  0000438c    00000018                   : timer.obj (.text:TimerIntRegister)
+                  000043a4    00000018                   : uart.obj (.text:UARTIntRegister)
+                  000043bc    00000014                   : uart.obj (.text:UARTEnable)
+                  000043d0    00000014     rtsv7M4_T_le_v4SPD16_eabi.lib : strcpy.c.obj (.text:strcpy)
+                  000043e4    00000014                                   : strlen.c.obj (.text:strlen)
+                  000043f8    00000012     driverlib.lib : gpio.obj (.text:GPIOPinTypeGPIOInput)
+                  0000440a    00000012                   : gpio.obj (.text:GPIOPinTypeI2C)
+                  0000441c    00000012                   : gpio.obj (.text:GPIOPinTypeI2CSCL)
+                  0000442e    00000012                   : gpio.obj (.text:GPIOPinTypeSSI)
+                  00004440    00000012                   : gpio.obj (.text:GPIOPinTypeUART)
+                  00004452    00000012                   : ssi.obj (.text:SSIDataGetNonBlocking)
+                  00004464    00000012                   : timer.obj (.text:TimerLoadSet)
+                  00004476    00000010                   : interrupt.obj (.text:IntMasterDisable)
+                  00004486    00000010                   : interrupt.obj (.text:IntMasterEnable)
+                  00004496    00000010     tm4c123gh6pm_startup_ccs.obj (.text:_Z4ceilf)
+                  000044a6    00000010     tm4c123gh6pm_startup_ccs.obj (.text:_Z4log2f)
+                  000044b6    0000000e     driverlib.lib : gpio.obj (.text:GPIOIntDisable)
+                  000044c4    0000000e                   : gpio.obj (.text:GPIOIntStatus)
+                  000044d2    0000000e                   : timer.obj (.text:TimerEnable)
+                  000044e0    0000000e                   : uart.obj (.text:UARTCharGetNonBlocking)
+                  000044ee    0000000e                   : uart.obj (.text:UARTCharsAvail)
+                  000044fc    0000000e     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  0000450a    0000000c     driverlib.lib : cpu.obj (.text:CPUcpsid)
+                  00004516    0000000c                   : cpu.obj (.text:CPUcpsie)
+                  00004522    0000000c                   : gpio.obj (.text:GPIOIntEnable)
+                  0000452e    0000000c                   : ssi.obj (.text:SSIDataGet)
+                  0000453a    0000000c     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init)
+                  00004546    0000000a     driverlib.lib : i2c.obj (.text:I2CMasterEnable)
+                  00004550    0000000a                   : ssi.obj (.text:SSIDataPut)
+                  0000455a    0000000a                   : ssi.obj (.text:SSIEnable)
+                  00004564    0000000a                   : uart.obj (.text:UARTCharPut)
+                  0000456e    0000000a                   : uart.obj (.text:UARTFIFOEnable)
+                  00004578    00000008                   : i2c.obj (.text:I2CMasterBusy)
+                  00004580    00000008                   : i2c.obj (.text:I2CMasterSlaveAddrSet)
+                  00004588    00000008                   : ssi.obj (.text:SSIBusy)
+                  00004590    00000008                   : timer.obj (.text:TimerIntEnable)
+                  00004598    00000008                   : uart.obj (.text:UARTIntEnable)
+                  000045a0    00000008     rtsv7M4_T_le_v4SPD16_eabi.lib : errno.c.obj (.text:__aeabi_errno_addr)
+                  000045a8    00000006     driverlib.lib : gpio.obj (.text:GPIOIntClear)
+                  000045ae    00000006                   : gpio.obj (.text:GPIOPinRead)
+                  000045b4    00000006                   : gpio.obj (.text:GPIOPinWrite)
+                  000045ba    00000006                   : sysctl.obj (.text:SysCtlDelay)
+                  000045c0    00000006                   : uart.obj (.text:UARTFIFOLevelSet)
+                  000045c6    00000004                   : i2c.obj (.text:I2CMasterControl)
+                  000045ca    00000004                   : i2c.obj (.text:I2CMasterDataGet)
+                  000045ce    00000004                   : i2c.obj (.text:I2CMasterDataPut)
+                  000045d2    00000004                   : timer.obj (.text:TimerIntClear)
+                  000045d6    00000004                   : uart.obj (.text:UARTIntClear)
+                  000045da    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.c.obj (.text:_system_pre_init)
+                  000045de    00000004                                   : exit.c.obj (.text:abort:abort)
+
+.const     0    000045e4    000003ce     
+                  000045e4    000000d8     driverlib.lib : gpio.obj (.const:g_ppui32GPIOIntMapSnowflake)
+                  000046bc    000000c0                   : gpio.obj (.const:g_ppui32GPIOIntMapBlizzard)
+                  0000477c    00000090                   : gpio.obj (.const:g_pui32GPIOBaseAddrs)
+                  0000480c    00000070                   : interrupt.obj (.const)
+                  0000487c    00000060                   : timer.obj (.const:g_ppui32TimerIntMap)
+                  000048dc    00000040                   : timer.obj (.const:g_ppui32TimerIntMapSnowflake)
+                  0000491c    00000040                   : uart.obj (.const:g_ppui32UARTIntMap)
+                  0000495c    00000040                   : uart.obj (.const:g_ppui32UARTIntMapSnowflake)
+                  0000499c    00000012     tm4c123gh6pm_startup_ccs.obj (.const:.string)
+                  000049ae    00000004     tm4c123gh6pm_startup_ccs.obj (.const:.string:$P$T0$1$2)
+
+.cinit     0    000049b8    00000228     
+                  000049b8    000001ef     (.cinit..data.load) [load image, compression = lzss]
+                  00004ba7    00000001     --HOLE-- [fill = 0]
+                  00004ba8    0000000c     (__TI_handler_table)
+                  00004bb4    00000004     --HOLE-- [fill = 0]
+                  00004bb8    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00004bc0    00000008     (.cinit..vtable.load) [load image, compression = zero_init]
+                  00004bc8    00000018     (__TI_cinit_table)
+
+.init_array 
+*          0    000049b4    00000004     
+                  000049b4    00000004     tm4c123gh6pm_startup_ccs.obj (.init_array)
+
+.vtable    0    20000000    0000026c     UNINITIALIZED
+                  20000000    0000026c     driverlib.lib : interrupt.obj (.vtable)
+
+.data      0    2000026c    0000020c     UNINITIALIZED
+                  2000026c    0000000b     tm4c123gh6pm_startup_ccs.obj (.data:output$2$1)
+                  20000277    00000009     tm4c123gh6pm_startup_ccs.obj (.data:output$1$1)
+                  20000280    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_0)
+                  20000285    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_1)
+                  2000028a    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_2)
+                  2000028f    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_3)
+                  20000294    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_4)
+                  20000299    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_5)
+                  2000029e    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_6)
+                  200002a3    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_7)
+                  200002a8    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_8)
+                  200002ad    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_9)
+                  200002b2    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_A)
+                  200002b7    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_AMP)
+                  200002bc    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_ANF)
+                  200002c1    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_AST)
+                  200002c6    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_AT)
+                  200002cb    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_AUML)
+                  200002d0    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_B)
+                  200002d5    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_BDS)
+                  200002da    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_BLK)
+                  200002df    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_BNK)
+                  200002e4    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_BSL)
+                  200002e9    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_C)
+                  200002ee    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_D)
+                  200002f3    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_DOL)
+                  200002f8    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_DOT)
+                  200002fd    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_DPT)
+                  20000302    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_E)
+                  20000307    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_EQ)
+                  2000030c    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_EXM)
+                  20000311    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_F)
+                  20000316    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_G)
+                  2000031b    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_H)
+                  20000320    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_HKM)
+                  20000325    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_HSH)
+                  2000032a    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_I)
+                  2000032f    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_J)
+                  20000334    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_K)
+                  20000339    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_L)
+                  2000033e    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_LGK)
+                  20000343    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_LKM)
+                  20000348    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_LRK)
+                  2000034d    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_LSK)
+                  20000352    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_M)
+                  20000357    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_N)
+                  2000035c    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_O)
+                  20000361    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_OUML)
+                  20000366    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_P)
+                  2000036b    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_PFO)
+                  20000370    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_PIP)
+                  20000375    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_PLS)
+                  2000037a    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_PRZ)
+                  2000037f    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_Q)
+                  20000384    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_QSM)
+                  20000389    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_R)
+                  2000038e    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_RGK)
+                  20000393    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_RRK)
+                  20000398    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_RSK)
+                  2000039d    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_S)
+                  200003a2    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_SL)
+                  200003a7    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_T)
+                  200003ac    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_TIC)
+                  200003b1    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_TIL)
+                  200003b6    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_U)
+                  200003bb    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_UUML)
+                  200003c0    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_V)
+                  200003c5    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_W)
+                  200003ca    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_X)
+                  200003cf    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_Y)
+                  200003d4    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_Z)
+                  200003d9    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII__)
+                  200003de    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_a)
+                  200003e3    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_auml)
+                  200003e8    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_b)
+                  200003ed    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_c)
+                  200003f2    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_d)
+                  200003f7    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_e)
+                  200003fc    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_f)
+                  20000401    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_g)
+                  20000406    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_h)
+                  2000040b    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_i)
+                  20000410    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_j)
+                  20000415    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_k)
+                  2000041a    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_l)
+                  2000041f    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_m)
+                  20000424    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_n)
+                  20000429    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_o)
+                  2000042e    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_ouml)
+                  20000433    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_p)
+                  20000438    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_q)
+                  2000043d    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_r)
+                  20000442    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_s)
+                  20000447    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_t)
+                  2000044c    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_u)
+                  20000451    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_uuml)
+                  20000456    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_v)
+                  2000045b    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_w)
+                  20000460    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_x)
+                  20000465    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_y)
+                  2000046a    00000005     tm4c123gh6pm_startup_ccs.obj (.data:_ASCII_z)
+                  2000046f    00000001     --HOLE--
+                  20000470    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : errno.c.obj (.data)
+                  20000474    00000004     tm4c123gh6pm_startup_ccs.obj (.data)
+
+.bss       0    20000678    00000192     UNINITIALIZED
+                  20000678    00000100     (.common:uartBuffer)
+                  20000778    0000003c     tm4c123gh6pm_startup_ccs.obj (.bss:text$4)
+                  200007b4    00000020     (.common:lightInt)
+                  200007d4    0000000a     tm4c123gh6pm_startup_ccs.obj (.bss:t)
+                  200007de    0000000a     tm4c123gh6pm_startup_ccs.obj (.bss:temp)
+                  200007e8    00000009     tm4c123gh6pm_startup_ccs.obj (.bss:clk)
+                  200007f1    00000001     tm4c123gh6pm_startup_ccs.obj (.bss:disp)
+                  200007f2    00000001     tm4c123gh6pm_startup_ccs.obj (.bss)
+                  200007f3    00000001     (.common:appendSyncSymbol)
+                  200007f4    00000004     (.common:i)
+                  200007f8    00000004     (.common:lux)
+                  200007fc    00000004     (.common:uartIndex)
+                  20000800    00000001     (.common:brightness)
+                  20000801    00000001     (.common:btn1Pressed)
+                  20000802    00000001     (.common:btn2Pressed)
+                  20000803    00000001     (.common:changed)
+                  20000804    00000001     (.common:dataReceived)
+                  20000805    00000001     (.common:debounced)
+                  20000806    00000001     (.common:dispMode)
+                  20000807    00000001     (.common:gotNMEAMessage)
+                  20000808    00000001     (.common:lightMeasure)
+                  20000809    00000001     (.common:state)
+
+.stack     0    20000478    00000200     UNINITIALIZED
+                  20000478    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.stack)
+                  2000047c    000001fc     --HOLE--
+
+MODULE SUMMARY
+
+       Module                         code    ro data   rw data
+       ------                         ----    -------   -------
+    <current directory>
+       tm4c123gh6pm_startup_ccs.obj   12132   646       921    
+    +--+------------------------------+-------+---------+---------+
+       Total:                         12132   646       921    
+                                                               
+    /home/raphael/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/lib/rtsv7M4_T_le_v4SPD16_eabi.lib
+       fd_add_t2.asm.obj              438     0         0      
+       e_log2f.c.obj                  320     0         0      
+       fd_div_t2.asm.obj              310     0         0      
+       fd_mul_t2.asm.obj              252     0         0      
+       s_ceil.c.obj                   248     0         0      
+       s_floor.c.obj                  248     0         0      
+       memcpy_t2.asm.obj              156     0         0      
+       fd_cmp_t2.asm.obj              134     0         0      
+       memset_t2.asm.obj              122     0         0      
+       s_ceilf.c.obj                  120     0         0      
+       fd_tos_t2.asm.obj              110     0         0      
+       copy_decompress_lzss.c.obj     104     0         0      
+       autoinit.c.obj                 96      0         0      
+       fd_toi_t2.asm.obj              72      0         0      
+       boot_cortex_m.c.obj            56      0         0      
+       i_tofd_t2.asm.obj              46      0         0      
+       strcpy.c.obj                   20      0         0      
+       strlen.c.obj                   20      0         0      
+       copy_decompress_none.c.obj     14      0         0      
+       copy_zero_init.c.obj           12      0         0      
+       errno.c.obj                    8       0         4      
+       exit.c.obj                     4       0         0      
+       pre_init.c.obj                 4       0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         2914    0         4      
+                                                               
+    /home/raphael/ti/tivaware/driverlib/ccs/Debug/driverlib.lib
+       gpio.obj                       770     552       0      
+       interrupt.obj                  292     112       620    
+       timer.obj                      264     160       0      
+       uart.obj                       276     128       0      
+       sysctl.obj                     358     0         0      
+       ssi.obj                        118     0         0      
+       i2c.obj                        114     0         0      
+       cpu.obj                        24      0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         2216    952       620    
+                                                               
+       Stack:                         0       0         512    
+       Linker Generated:              0       547       0      
+    +--+------------------------------+-------+---------+---------+
+       Grand Total:                   17262   2145      2057   
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00004bc8 records: 3, size/record: 8, table size: 24
+	.data: load addr=000049b8, load size=000001ef bytes, run addr=2000026c, run size=0000020c bytes, compression=lzss
+	.bss: load addr=00004bb8, load size=00000008 bytes, run addr=20000678, run size=00000192 bytes, compression=zero_init
+	.vtable: load addr=00004bc0, load size=00000008 bytes, run addr=20000000, run size=0000026c bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00004ba8 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_zero_init
+	index: 1, handler: __TI_decompress_lzss
+	index: 2, handler: __TI_decompress_none
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                                                                        
+-------   ----                                                                        
+000045df  C$$EXIT                                                                     
+0000450b  CPUcpsid                                                                    
+00004517  CPUcpsie                                                                    
+000042df  GPIODirModeSet                                                              
+000045a9  GPIOIntClear                                                                
+000044b7  GPIOIntDisable                                                              
+00004523  GPIOIntEnable                                                               
+00004345  GPIOIntRegister                                                             
+000044c5  GPIOIntStatus                                                               
+00003f51  GPIOIntTypeSet                                                              
+000035c3  GPIOPadConfigSet                                                            
+00004041  GPIOPinConfigure                                                            
+000045af  GPIOPinRead                                                                 
+000043f9  GPIOPinTypeGPIOInput                                                        
+0000435d  GPIOPinTypeGPIOOutput                                                       
+0000440b  GPIOPinTypeI2C                                                              
+0000441d  GPIOPinTypeI2CSCL                                                           
+0000442f  GPIOPinTypeSSI                                                              
+00004441  GPIOPinTypeUART                                                             
+000045b5  GPIOPinWrite                                                                
+00004579  I2CMasterBusy                                                               
+000045c7  I2CMasterControl                                                            
+000045cb  I2CMasterDataGet                                                            
+000045cf  I2CMasterDataPut                                                            
+00004547  I2CMasterEnable                                                             
+00003fa9  I2CMasterInitExpClk                                                         
+00004581  I2CMasterSlaveAddrSet                                                       
+00003d59  IntDisable                                                                  
+00003dc1  IntEnable                                                                   
+00004477  IntMasterDisable                                                            
+00004487  IntMasterEnable                                                             
+00004249  IntRegister                                                                 
+0000026d  ResetISR                                                                    
+000049b4  SHT$$INIT_ARRAY$$Base                                                       
+000049b8  SHT$$INIT_ARRAY$$Limit                                                      
+00004589  SSIBusy                                                                     
+0000419d  SSIConfigSetExpClk                                                          
+0000452f  SSIDataGet                                                                  
+00004453  SSIDataGetNonBlocking                                                       
+00004551  SSIDataPut                                                                  
+0000455b  SSIEnable                                                                   
+000039e1  SysCtlClockSet                                                              
+000045bb  SysCtlDelay                                                                 
+0000427d  SysCtlPeripheralEnable                                                      
+000041d9  SysCtlPeripheralReady                                                       
+00003e91  TimerConfigure                                                              
+00004375  TimerDisable                                                                
+000044d3  TimerEnable                                                                 
+000045d3  TimerIntClear                                                               
+00004591  TimerIntEnable                                                              
+0000438d  TimerIntRegister                                                            
+00004465  TimerLoadSet                                                                
+000044e1  UARTCharGetNonBlocking                                                      
+00004565  UARTCharPut                                                                 
+000044ef  UARTCharsAvail                                                              
+000040d1  UARTConfigSetExpClk                                                         
+00004309  UARTDisable                                                                 
+000043bd  UARTEnable                                                                  
+0000456f  UARTFIFOEnable                                                              
+000045c1  UARTFIFOLevelSet                                                            
+000045d7  UARTIntClear                                                                
+00004599  UARTIntEnable                                                               
+000043a5  UARTIntRegister                                                             
+20000280  _ASCII_0                                                                    
+20000285  _ASCII_1                                                                    
+2000028a  _ASCII_2                                                                    
+2000028f  _ASCII_3                                                                    
+20000294  _ASCII_4                                                                    
+20000299  _ASCII_5                                                                    
+2000029e  _ASCII_6                                                                    
+200002a3  _ASCII_7                                                                    
+200002a8  _ASCII_8                                                                    
+200002ad  _ASCII_9                                                                    
+200002b2  _ASCII_A                                                                    
+200002b7  _ASCII_AMP                                                                  
+200002bc  _ASCII_ANF                                                                  
+200002c1  _ASCII_AST                                                                  
+200002c6  _ASCII_AT                                                                   
+200002cb  _ASCII_AUML                                                                 
+200002d0  _ASCII_B                                                                    
+200002d5  _ASCII_BDS                                                                  
+200002da  _ASCII_BLK                                                                  
+200002df  _ASCII_BNK                                                                  
+200002e4  _ASCII_BSL                                                                  
+200002e9  _ASCII_C                                                                    
+200002ee  _ASCII_D                                                                    
+200002f3  _ASCII_DOL                                                                  
+200002f8  _ASCII_DOT                                                                  
+200002fd  _ASCII_DPT                                                                  
+20000302  _ASCII_E                                                                    
+20000307  _ASCII_EQ                                                                   
+2000030c  _ASCII_EXM                                                                  
+20000311  _ASCII_F                                                                    
+20000316  _ASCII_G                                                                    
+2000031b  _ASCII_H                                                                    
+20000320  _ASCII_HKM                                                                  
+20000325  _ASCII_HSH                                                                  
+2000032a  _ASCII_I                                                                    
+2000032f  _ASCII_J                                                                    
+20000334  _ASCII_K                                                                    
+20000339  _ASCII_L                                                                    
+2000033e  _ASCII_LGK                                                                  
+20000343  _ASCII_LKM                                                                  
+20000348  _ASCII_LRK                                                                  
+2000034d  _ASCII_LSK                                                                  
+20000352  _ASCII_M                                                                    
+20000357  _ASCII_N                                                                    
+2000035c  _ASCII_O                                                                    
+20000361  _ASCII_OUML                                                                 
+20000366  _ASCII_P                                                                    
+2000036b  _ASCII_PFO                                                                  
+20000370  _ASCII_PIP                                                                  
+20000375  _ASCII_PLS                                                                  
+2000037a  _ASCII_PRZ                                                                  
+2000037f  _ASCII_Q                                                                    
+20000384  _ASCII_QSM                                                                  
+20000389  _ASCII_R                                                                    
+2000038e  _ASCII_RGK                                                                  
+20000393  _ASCII_RRK                                                                  
+20000398  _ASCII_RSK                                                                  
+2000039d  _ASCII_S                                                                    
+200003a2  _ASCII_SL                                                                   
+200003a7  _ASCII_T                                                                    
+200003ac  _ASCII_TIC                                                                  
+200003b1  _ASCII_TIL                                                                  
+200003b6  _ASCII_U                                                                    
+200003bb  _ASCII_UUML                                                                 
+200003c0  _ASCII_V                                                                    
+200003c5  _ASCII_W                                                                    
+200003ca  _ASCII_X                                                                    
+200003cf  _ASCII_Y                                                                    
+200003d4  _ASCII_Z                                                                    
+200003d9  _ASCII__                                                                    
+200003de  _ASCII_a                                                                    
+200003e3  _ASCII_auml                                                                 
+200003e8  _ASCII_b                                                                    
+200003ed  _ASCII_c                                                                    
+200003f2  _ASCII_d                                                                    
+200003f7  _ASCII_e                                                                    
+200003fc  _ASCII_f                                                                    
+20000401  _ASCII_g                                                                    
+20000406  _ASCII_h                                                                    
+2000040b  _ASCII_i                                                                    
+20000410  _ASCII_j                                                                    
+20000415  _ASCII_k                                                                    
+2000041a  _ASCII_l                                                                    
+2000041f  _ASCII_m                                                                    
+20000424  _ASCII_n                                                                    
+20000429  _ASCII_o                                                                    
+2000042e  _ASCII_ouml                                                                 
+20000433  _ASCII_p                                                                    
+20000438  _ASCII_q                                                                    
+2000043d  _ASCII_r                                                                    
+20000442  _ASCII_s                                                                    
+20000447  _ASCII_t                                                                    
+2000044c  _ASCII_u                                                                    
+20000451  _ASCII_uuml                                                                 
+20000456  _ASCII_v                                                                    
+2000045b  _ASCII_w                                                                    
+20000460  _ASCII_x                                                                    
+20000465  _ASCII_y                                                                    
+2000046a  _ASCII_z                                                                    
+000030b3  _Z12Timer1BResetv                                                           
+00002ce7  _Z12onButtonDownv                                                           
+00002459  _Z13stringBuilderPchhthhhh12DisplayModes                                    
+00002e73  _Z15UART4IntHandlerv                                                        
+00002d85  _Z15onSecondElapsedv                                                        
+00002ee5  _Z16setupPeripheralsv                                                       
+00002b45  _Z17incrementDateTimev                                                      
+00002e49  _Z17requestAtomicTimev                                                      
+00002d33  _Z18WTimer0AIntHandlerv                                                     
+00002e23  _Z18WTimer0BIntHandlerv                                                     
+00002da1  _Z18WTimer1BIntHandlerv                                                     
+00004497  _Z4ceilf                                                                    
+000044a7  _Z4log2f                                                                    
+000030dd  _Z5delayi                                                                   
+00004329  _Z5floorIiENSt3__29enable_ifIXsr3std3__211is_integralIT_EE5valueEdE4typeES2_
+00002ae1  _Z9shiftMenuv                                                               
+00001f87  _ZN15Light_Interface10initializeEv                                          
+00001f2d  _ZN15Light_Interface12configureI2CEv                                        
+00001efd  _ZN15Light_Interface13ISL29023GetIREv                                       
+00001dc7  _ZN15Light_Interface14ISL29023GetALSEv                                      
+00001e09  _ZN15Light_Interface16ISL29023GetRawIREv                                    
+00001cd9  _ZN15Light_Interface17ISL29023GetRawALSEv                                   
+00001bdd  _ZN15Light_Interface22ISL29023ChangeSettingsEhh                             
+00001f9d  _ZN15Light_Interface6getLuxEv                                               
+00000279  _ZN4TimeC1Ev                                                                
+00000279  _ZN4TimeC2Ev                                                                
+00000cdd  _ZN6DS323410_burstReadEv                                                    
+00000d1b  _ZN6DS323410_ssPinHighEv                                                    
+00000c17  _ZN6DS323410_writeByteEh                                                    
+0000059d  _ZN6DS323410getDateStrEhhc                                                  
+0000048b  _ZN6DS323410getTimeStrEh                                                    
+00000a45  _ZN6DS323411getMonthStrEh                                                   
+00000c2b  _ZN6DS323413_readRegisterEh                                                 
+00000c59  _ZN6DS323414_writeRegisterEhh                                               
+00000bc1  _ZN6DS32344peekEh                                                           
+00000b87  _ZN6DS32344pokeEhh                                                          
+000002c9  _ZN6DS32345beginEv                                                          
+00000465  _ZN6DS32346setDOWEh                                                         
+00000d3b  _ZN6DS32347_decodeEh                                                        
+00000e71  _ZN6DS32347_encodeEh                                                        
+00000b11  _ZN6DS32347getTempEv                                                        
+000002e9  _ZN6DS32347getTimeEv                                                        
+000003d5  _ZN6DS32347setDateEhht                                                      
+0000036f  _ZN6DS32347setTimeEhhh                                                      
+00000f6b  _ZN6DS32348_SPIreadEv                                                       
+00000de3  _ZN6DS32348_decodeHEh                                                       
+00000e41  _ZN6DS32348_decodeYEh                                                       
+00000ead  _ZN6DS32349_SPIstartEv                                                      
+00000f3b  _ZN6DS32349_SPIwriteEh                                                      
+00000c0b  _ZN6DS32349_readByteEv                                                      
+00000d2b  _ZN6DS32349_ssPinLowEv                                                      
+000009b9  _ZN6DS32349getDOWStrEh                                                      
+000002b1  _ZN6DS3234C1Eh                                                              
+000002b1  _ZN6DS3234C2Eh                                                              
+0000194b  _ZN8HCMS39XX10chipEnableEv                                                  
+00001065  _ZN8HCMS39XX10encodeCharEc                                                  
+00000fa9  _ZN8HCMS39XX10initializeEv                                                  
+0000195b  _ZN8HCMS39XX11chipDisableEv                                                 
+00000ff5  _ZN8HCMS39XX11displayTestEv                                                 
+00001baf  _ZN8HCMS39XX11waitNoTicksEi                                                 
+00001641  _ZN8HCMS39XX11write4CharsEPh                                                
+00001a87  _ZN8HCMS39XX11writeStringEPc                                                
+0000198b  _ZN8HCMS39XX12blankDisplayEv                                                
+00001731  _ZN8HCMS39XX13setBrightnessEh                                               
+0000199b  _ZN8HCMS39XX14unBlankDisplayEv                                              
+00001757  _ZN8HCMS39XX15setControlWord0Ehbh                                           
+0000183d  _ZN8HCMS39XX15setControlWord1Ebb                                            
+0000191b  _ZN8HCMS39XX17selectDotRegisterEv                                           
+00001933  _ZN8HCMS39XX21selectControlRegisterEv                                       
+0000196b  _ZN8HCMS39XX6clkLowEv                                                       
+0000197b  _ZN8HCMS39XX7clkHighEv                                                      
+00001b79  _ZN8HCMS39XX9setupGPIOEv                                                    
+000019b1  _ZN8HCMS39XX9writeCharEh                                                    
+00000f9d  _ZN8HCMS39XXC1Ev                                                            
+00000f9d  _ZN8HCMS39XXC2Ev                                                            
+20000678  __STACK_END                                                                 
+00000200  __STACK_SIZE                                                                
+20000678  __STACK_TOP                                                                 
+00004bc8  __TI_CINIT_Base                                                             
+00004be0  __TI_CINIT_Limit                                                            
+00004ba8  __TI_Handler_Table_Base                                                     
+00004bb4  __TI_Handler_Table_Limit                                                    
+00003ef1  __TI_auto_init_nobinit                                                      
+00003e29  __TI_decompress_lzss                                                        
+000044fd  __TI_decompress_none                                                        
+ffffffff  __TI_pprof_out_hndl                                                         
+ffffffff  __TI_prof_data_size                                                         
+ffffffff  __TI_prof_data_start                                                        
+00000000  __TI_static_base__                                                          
+0000453b  __TI_zero_init                                                              
+00003b71  __aeabi_cdrcmple                                                            
+00003ce9  __aeabi_d2f                                                                 
+00004089  __aeabi_d2iz                                                                
+0000319f  __aeabi_dadd                                                                
+0000348d  __aeabi_ddiv                                                                
+000036f5  __aeabi_dmul                                                                
+00003195  __aeabi_dsub                                                                
+000045a1  __aeabi_errno_addr                                                          
+000042b1  __aeabi_i2d                                                                 
+00003bf7  __aeabi_memclr                                                              
+00003bf7  __aeabi_memclr4                                                             
+00003bf7  __aeabi_memclr8                                                             
+00003ad5  __aeabi_memcpy                                                              
+00003ad5  __aeabi_memcpy4                                                             
+00003ad5  __aeabi_memcpy8                                                             
+00003bf9  __aeabi_memset                                                              
+00003bf9  __aeabi_memset4                                                             
+00003bf9  __aeabi_memset8                                                             
+ffffffff  __binit__                                                                   
+ffffffff  __c_args__                                                                  
+UNDEFED   __mpu_init                                                                  
+20000478  __stack                                                                     
+000030f1  __sti___8_main_cpp_t                                                        
+00004211  _c_int00_noargs                                                             
+UNDEFED   _system_post_cinit                                                          
+000045db  _system_pre_init                                                            
+000045df  abort                                                                       
+200007f3  appendSyncSymbol                                                            
+ffffffff  binit                                                                       
+20000800  brightness                                                                  
+20000801  btn1Pressed                                                                 
+20000802  btn2Pressed                                                                 
+000037f1  ceil                                                                        
+00003c71  ceilf                                                                       
+000037f1  ceill                                                                       
+20000803  changed                                                                     
+200007e8  clk                                                                         
+20000804  dataReceived                                                                
+20000805  debounced                                                                   
+200007f1  disp                                                                        
+20000806  dispMode                                                                    
+20000470  errno                                                                       
+000038e9  floor                                                                       
+000038e9  floorl                                                                      
+20000000  g_pfnRAMVectors                                                             
+00000000  g_pfnVectors                                                                
+20000807  gotNMEAMessage                                                              
+200007f4  i                                                                           
+200007b4  lightInt                                                                    
+20000808  lightMeasure                                                                
+0000334d  log2f                                                                       
+200007f8  lux                                                                         
+00001fdd  main                                                                        
+00003ad5  memcpy                                                                      
+00003bff  memset                                                                      
+20000809  state                                                                       
+000043d1  strcpy                                                                      
+000043e5  strlen                                                                      
+200007d4  t                                                                           
+200007de  temp                                                                        
+20000678  uartBuffer                                                                  
+200007fc  uartIndex                                                                   
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                                                                        
+-------   ----                                                                        
+00000000  __TI_static_base__                                                          
+00000000  g_pfnVectors                                                                
+00000200  __STACK_SIZE                                                                
+0000026d  ResetISR                                                                    
+00000279  _ZN4TimeC1Ev                                                                
+00000279  _ZN4TimeC2Ev                                                                
+000002b1  _ZN6DS3234C1Eh                                                              
+000002b1  _ZN6DS3234C2Eh                                                              
+000002c9  _ZN6DS32345beginEv                                                          
+000002e9  _ZN6DS32347getTimeEv                                                        
+0000036f  _ZN6DS32347setTimeEhhh                                                      
+000003d5  _ZN6DS32347setDateEhht                                                      
+00000465  _ZN6DS32346setDOWEh                                                         
+0000048b  _ZN6DS323410getTimeStrEh                                                    
+0000059d  _ZN6DS323410getDateStrEhhc                                                  
+000009b9  _ZN6DS32349getDOWStrEh                                                      
+00000a45  _ZN6DS323411getMonthStrEh                                                   
+00000b11  _ZN6DS32347getTempEv                                                        
+00000b87  _ZN6DS32344pokeEhh                                                          
+00000bc1  _ZN6DS32344peekEh                                                           
+00000c0b  _ZN6DS32349_readByteEv                                                      
+00000c17  _ZN6DS323410_writeByteEh                                                    
+00000c2b  _ZN6DS323413_readRegisterEh                                                 
+00000c59  _ZN6DS323414_writeRegisterEhh                                               
+00000cdd  _ZN6DS323410_burstReadEv                                                    
+00000d1b  _ZN6DS323410_ssPinHighEv                                                    
+00000d2b  _ZN6DS32349_ssPinLowEv                                                      
+00000d3b  _ZN6DS32347_decodeEh                                                        
+00000de3  _ZN6DS32348_decodeHEh                                                       
+00000e41  _ZN6DS32348_decodeYEh                                                       
+00000e71  _ZN6DS32347_encodeEh                                                        
+00000ead  _ZN6DS32349_SPIstartEv                                                      
+00000f3b  _ZN6DS32349_SPIwriteEh                                                      
+00000f6b  _ZN6DS32348_SPIreadEv                                                       
+00000f9d  _ZN8HCMS39XXC1Ev                                                            
+00000f9d  _ZN8HCMS39XXC2Ev                                                            
+00000fa9  _ZN8HCMS39XX10initializeEv                                                  
+00000ff5  _ZN8HCMS39XX11displayTestEv                                                 
+00001065  _ZN8HCMS39XX10encodeCharEc                                                  
+00001641  _ZN8HCMS39XX11write4CharsEPh                                                
+00001731  _ZN8HCMS39XX13setBrightnessEh                                               
+00001757  _ZN8HCMS39XX15setControlWord0Ehbh                                           
+0000183d  _ZN8HCMS39XX15setControlWord1Ebb                                            
+0000191b  _ZN8HCMS39XX17selectDotRegisterEv                                           
+00001933  _ZN8HCMS39XX21selectControlRegisterEv                                       
+0000194b  _ZN8HCMS39XX10chipEnableEv                                                  
+0000195b  _ZN8HCMS39XX11chipDisableEv                                                 
+0000196b  _ZN8HCMS39XX6clkLowEv                                                       
+0000197b  _ZN8HCMS39XX7clkHighEv                                                      
+0000198b  _ZN8HCMS39XX12blankDisplayEv                                                
+0000199b  _ZN8HCMS39XX14unBlankDisplayEv                                              
+000019b1  _ZN8HCMS39XX9writeCharEh                                                    
+00001a87  _ZN8HCMS39XX11writeStringEPc                                                
+00001b79  _ZN8HCMS39XX9setupGPIOEv                                                    
+00001baf  _ZN8HCMS39XX11waitNoTicksEi                                                 
+00001bdd  _ZN15Light_Interface22ISL29023ChangeSettingsEhh                             
+00001cd9  _ZN15Light_Interface17ISL29023GetRawALSEv                                   
+00001dc7  _ZN15Light_Interface14ISL29023GetALSEv                                      
+00001e09  _ZN15Light_Interface16ISL29023GetRawIREv                                    
+00001efd  _ZN15Light_Interface13ISL29023GetIREv                                       
+00001f2d  _ZN15Light_Interface12configureI2CEv                                        
+00001f87  _ZN15Light_Interface10initializeEv                                          
+00001f9d  _ZN15Light_Interface6getLuxEv                                               
+00001fdd  main                                                                        
+00002459  _Z13stringBuilderPchhthhhh12DisplayModes                                    
+00002ae1  _Z9shiftMenuv                                                               
+00002b45  _Z17incrementDateTimev                                                      
+00002ce7  _Z12onButtonDownv                                                           
+00002d33  _Z18WTimer0AIntHandlerv                                                     
+00002d85  _Z15onSecondElapsedv                                                        
+00002da1  _Z18WTimer1BIntHandlerv                                                     
+00002e23  _Z18WTimer0BIntHandlerv                                                     
+00002e49  _Z17requestAtomicTimev                                                      
+00002e73  _Z15UART4IntHandlerv                                                        
+00002ee5  _Z16setupPeripheralsv                                                       
+000030b3  _Z12Timer1BResetv                                                           
+000030dd  _Z5delayi                                                                   
+000030f1  __sti___8_main_cpp_t                                                        
+00003195  __aeabi_dsub                                                                
+0000319f  __aeabi_dadd                                                                
+0000334d  log2f                                                                       
+0000348d  __aeabi_ddiv                                                                
+000035c3  GPIOPadConfigSet                                                            
+000036f5  __aeabi_dmul                                                                
+000037f1  ceil                                                                        
+000037f1  ceill                                                                       
+000038e9  floor                                                                       
+000038e9  floorl                                                                      
+000039e1  SysCtlClockSet                                                              
+00003ad5  __aeabi_memcpy                                                              
+00003ad5  __aeabi_memcpy4                                                             
+00003ad5  __aeabi_memcpy8                                                             
+00003ad5  memcpy                                                                      
+00003b71  __aeabi_cdrcmple                                                            
+00003bf7  __aeabi_memclr                                                              
+00003bf7  __aeabi_memclr4                                                             
+00003bf7  __aeabi_memclr8                                                             
+00003bf9  __aeabi_memset                                                              
+00003bf9  __aeabi_memset4                                                             
+00003bf9  __aeabi_memset8                                                             
+00003bff  memset                                                                      
+00003c71  ceilf                                                                       
+00003ce9  __aeabi_d2f                                                                 
+00003d59  IntDisable                                                                  
+00003dc1  IntEnable                                                                   
+00003e29  __TI_decompress_lzss                                                        
+00003e91  TimerConfigure                                                              
+00003ef1  __TI_auto_init_nobinit                                                      
+00003f51  GPIOIntTypeSet                                                              
+00003fa9  I2CMasterInitExpClk                                                         
+00004041  GPIOPinConfigure                                                            
+00004089  __aeabi_d2iz                                                                
+000040d1  UARTConfigSetExpClk                                                         
+0000419d  SSIConfigSetExpClk                                                          
+000041d9  SysCtlPeripheralReady                                                       
+00004211  _c_int00_noargs                                                             
+00004249  IntRegister                                                                 
+0000427d  SysCtlPeripheralEnable                                                      
+000042b1  __aeabi_i2d                                                                 
+000042df  GPIODirModeSet                                                              
+00004309  UARTDisable                                                                 
+00004329  _Z5floorIiENSt3__29enable_ifIXsr3std3__211is_integralIT_EE5valueEdE4typeES2_
+00004345  GPIOIntRegister                                                             
+0000435d  GPIOPinTypeGPIOOutput                                                       
+00004375  TimerDisable                                                                
+0000438d  TimerIntRegister                                                            
+000043a5  UARTIntRegister                                                             
+000043bd  UARTEnable                                                                  
+000043d1  strcpy                                                                      
+000043e5  strlen                                                                      
+000043f9  GPIOPinTypeGPIOInput                                                        
+0000440b  GPIOPinTypeI2C                                                              
+0000441d  GPIOPinTypeI2CSCL                                                           
+0000442f  GPIOPinTypeSSI                                                              
+00004441  GPIOPinTypeUART                                                             
+00004453  SSIDataGetNonBlocking                                                       
+00004465  TimerLoadSet                                                                
+00004477  IntMasterDisable                                                            
+00004487  IntMasterEnable                                                             
+00004497  _Z4ceilf                                                                    
+000044a7  _Z4log2f                                                                    
+000044b7  GPIOIntDisable                                                              
+000044c5  GPIOIntStatus                                                               
+000044d3  TimerEnable                                                                 
+000044e1  UARTCharGetNonBlocking                                                      
+000044ef  UARTCharsAvail                                                              
+000044fd  __TI_decompress_none                                                        
+0000450b  CPUcpsid                                                                    
+00004517  CPUcpsie                                                                    
+00004523  GPIOIntEnable                                                               
+0000452f  SSIDataGet                                                                  
+0000453b  __TI_zero_init                                                              
+00004547  I2CMasterEnable                                                             
+00004551  SSIDataPut                                                                  
+0000455b  SSIEnable                                                                   
+00004565  UARTCharPut                                                                 
+0000456f  UARTFIFOEnable                                                              
+00004579  I2CMasterBusy                                                               
+00004581  I2CMasterSlaveAddrSet                                                       
+00004589  SSIBusy                                                                     
+00004591  TimerIntEnable                                                              
+00004599  UARTIntEnable                                                               
+000045a1  __aeabi_errno_addr                                                          
+000045a9  GPIOIntClear                                                                
+000045af  GPIOPinRead                                                                 
+000045b5  GPIOPinWrite                                                                
+000045bb  SysCtlDelay                                                                 
+000045c1  UARTFIFOLevelSet                                                            
+000045c7  I2CMasterControl                                                            
+000045cb  I2CMasterDataGet                                                            
+000045cf  I2CMasterDataPut                                                            
+000045d3  TimerIntClear                                                               
+000045d7  UARTIntClear                                                                
+000045db  _system_pre_init                                                            
+000045df  C$$EXIT                                                                     
+000045df  abort                                                                       
+000049b4  SHT$$INIT_ARRAY$$Base                                                       
+000049b8  SHT$$INIT_ARRAY$$Limit                                                      
+00004ba8  __TI_Handler_Table_Base                                                     
+00004bb4  __TI_Handler_Table_Limit                                                    
+00004bc8  __TI_CINIT_Base                                                             
+00004be0  __TI_CINIT_Limit                                                            
+20000000  g_pfnRAMVectors                                                             
+20000280  _ASCII_0                                                                    
+20000285  _ASCII_1                                                                    
+2000028a  _ASCII_2                                                                    
+2000028f  _ASCII_3                                                                    
+20000294  _ASCII_4                                                                    
+20000299  _ASCII_5                                                                    
+2000029e  _ASCII_6                                                                    
+200002a3  _ASCII_7                                                                    
+200002a8  _ASCII_8                                                                    
+200002ad  _ASCII_9                                                                    
+200002b2  _ASCII_A                                                                    
+200002b7  _ASCII_AMP                                                                  
+200002bc  _ASCII_ANF                                                                  
+200002c1  _ASCII_AST                                                                  
+200002c6  _ASCII_AT                                                                   
+200002cb  _ASCII_AUML                                                                 
+200002d0  _ASCII_B                                                                    
+200002d5  _ASCII_BDS                                                                  
+200002da  _ASCII_BLK                                                                  
+200002df  _ASCII_BNK                                                                  
+200002e4  _ASCII_BSL                                                                  
+200002e9  _ASCII_C                                                                    
+200002ee  _ASCII_D                                                                    
+200002f3  _ASCII_DOL                                                                  
+200002f8  _ASCII_DOT                                                                  
+200002fd  _ASCII_DPT                                                                  
+20000302  _ASCII_E                                                                    
+20000307  _ASCII_EQ                                                                   
+2000030c  _ASCII_EXM                                                                  
+20000311  _ASCII_F                                                                    
+20000316  _ASCII_G                                                                    
+2000031b  _ASCII_H                                                                    
+20000320  _ASCII_HKM                                                                  
+20000325  _ASCII_HSH                                                                  
+2000032a  _ASCII_I                                                                    
+2000032f  _ASCII_J                                                                    
+20000334  _ASCII_K                                                                    
+20000339  _ASCII_L                                                                    
+2000033e  _ASCII_LGK                                                                  
+20000343  _ASCII_LKM                                                                  
+20000348  _ASCII_LRK                                                                  
+2000034d  _ASCII_LSK                                                                  
+20000352  _ASCII_M                                                                    
+20000357  _ASCII_N                                                                    
+2000035c  _ASCII_O                                                                    
+20000361  _ASCII_OUML                                                                 
+20000366  _ASCII_P                                                                    
+2000036b  _ASCII_PFO                                                                  
+20000370  _ASCII_PIP                                                                  
+20000375  _ASCII_PLS                                                                  
+2000037a  _ASCII_PRZ                                                                  
+2000037f  _ASCII_Q                                                                    
+20000384  _ASCII_QSM                                                                  
+20000389  _ASCII_R                                                                    
+2000038e  _ASCII_RGK                                                                  
+20000393  _ASCII_RRK                                                                  
+20000398  _ASCII_RSK                                                                  
+2000039d  _ASCII_S                                                                    
+200003a2  _ASCII_SL                                                                   
+200003a7  _ASCII_T                                                                    
+200003ac  _ASCII_TIC                                                                  
+200003b1  _ASCII_TIL                                                                  
+200003b6  _ASCII_U                                                                    
+200003bb  _ASCII_UUML                                                                 
+200003c0  _ASCII_V                                                                    
+200003c5  _ASCII_W                                                                    
+200003ca  _ASCII_X                                                                    
+200003cf  _ASCII_Y                                                                    
+200003d4  _ASCII_Z                                                                    
+200003d9  _ASCII__                                                                    
+200003de  _ASCII_a                                                                    
+200003e3  _ASCII_auml                                                                 
+200003e8  _ASCII_b                                                                    
+200003ed  _ASCII_c                                                                    
+200003f2  _ASCII_d                                                                    
+200003f7  _ASCII_e                                                                    
+200003fc  _ASCII_f                                                                    
+20000401  _ASCII_g                                                                    
+20000406  _ASCII_h                                                                    
+2000040b  _ASCII_i                                                                    
+20000410  _ASCII_j                                                                    
+20000415  _ASCII_k                                                                    
+2000041a  _ASCII_l                                                                    
+2000041f  _ASCII_m                                                                    
+20000424  _ASCII_n                                                                    
+20000429  _ASCII_o                                                                    
+2000042e  _ASCII_ouml                                                                 
+20000433  _ASCII_p                                                                    
+20000438  _ASCII_q                                                                    
+2000043d  _ASCII_r                                                                    
+20000442  _ASCII_s                                                                    
+20000447  _ASCII_t                                                                    
+2000044c  _ASCII_u                                                                    
+20000451  _ASCII_uuml                                                                 
+20000456  _ASCII_v                                                                    
+2000045b  _ASCII_w                                                                    
+20000460  _ASCII_x                                                                    
+20000465  _ASCII_y                                                                    
+2000046a  _ASCII_z                                                                    
+20000470  errno                                                                       
+20000478  __stack                                                                     
+20000678  __STACK_END                                                                 
+20000678  __STACK_TOP                                                                 
+20000678  uartBuffer                                                                  
+200007b4  lightInt                                                                    
+200007d4  t                                                                           
+200007de  temp                                                                        
+200007e8  clk                                                                         
+200007f1  disp                                                                        
+200007f3  appendSyncSymbol                                                            
+200007f4  i                                                                           
+200007f8  lux                                                                         
+200007fc  uartIndex                                                                   
+20000800  brightness                                                                  
+20000801  btn1Pressed                                                                 
+20000802  btn2Pressed                                                                 
+20000803  changed                                                                     
+20000804  dataReceived                                                                
+20000805  debounced                                                                   
+20000806  dispMode                                                                    
+20000807  gotNMEAMessage                                                              
+20000808  lightMeasure                                                                
+20000809  state                                                                       
+ffffffff  __TI_pprof_out_hndl                                                         
+ffffffff  __TI_prof_data_size                                                         
+ffffffff  __TI_prof_data_start                                                        
+ffffffff  __binit__                                                                   
+ffffffff  __c_args__                                                                  
+ffffffff  binit                                                                       
+UNDEFED   __mpu_init                                                                  
+UNDEFED   _system_post_cinit                                                          
+
+[314 symbols]
